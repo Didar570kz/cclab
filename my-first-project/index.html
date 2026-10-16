@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5.sound@0.4.1/dist/p5.sound.min.js"></script>
+    
+    
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <main>
+    </main>
+    <script src="sketch.js"> </script>
+
+/*
+Template for IMA's Creative Coding Lab 
+
+Project A: Generative Creatures
+CCLaboratories Biodiversity Atlas 
+*/
+
+let x;
+let y;
+let R = 100;
+let vNumber = 200;
+let smoothness = 0.5;
+
+function setup() {
+    createCanvas(800, 500);
+}
+
+function draw() {
+    background(0);
+    noStroke();
+    push();
+    translate(width / 2, height / 2);
+    rotate(sin(frameCount * 0.01));
+    beginShape();
+    for (let i = 0; i < TWO_PI; i += TWO_PI / vNumber) {
+        let offset = noise(
+            smoothness * sin(i),
+            smoothness * cos(i),
+            frameCount * 0.01
+        );
+        offset = map(offset, 0, 1, -R * 0.2, R * 0.2);
+        let radius = R + offset;
+        x = radius * cos(i);
+        y = radius * sin(i);
+        curveVertex(x, y);
+    }
+    endShape(CLOSE);
+    pop();
+}
+
+
+
+
+  </body>
+</html>
