@@ -1,0 +1,106 @@
+<!-- 
+Template for IMA's Creative Coding Lab 
+
+Project A: Generative Creatures
+CCLaboratories Biodiversity Atlas 
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Sweet Tooth cell</title>
+
+<!-- allow special characters, including Arabic, Chinese, Korean, Japanese, etc. -->
+<meta charset="UTF-8">
+<!-- link the style sheet -->
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- new colors -->
+<style>
+  body { background-color: #1A2428; color: #BFD8D5; }
+  .black { color: #F4FAF9; }
+  .red { color: #FA5FD1; }
+  .green { color: #8CEDEA; }
+  .yellow { color: #FFCCCC; }
+  a { color: #8CEDEA; }
+</style>
+<!-- import p5.js library -->
+<script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.js"></script>
+<script>
+// prevent scrolling when spacebar and arrow keys are pressed.
+window.addEventListener("keydown", function (e) { if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) { e.preventDefault(); } }, false);
+</script>
+</head>
+
+<body>
+<!-- title -->
+<div id="title-wrapper">
+<h1 class="headline black">Sweet Tooth cell</h1>
+</div>
+
+<!-- main content -->
+<div id="main-wrapper">
+<main>
+<!-- This is where your p5 sketch will be appended and appear! -->
+</main>
+<div class="two-columns">
+<div class="left">
+<h3 class="red">Scientific Name:</h3>
+<p>Glucovora</p>
+
+<h3 class="red">Discovered by / at:</h3>
+<p>Atai, under a microscope in his CCLab class, Fall 2026</p>
+
+<h3 class="green">Family:</h3>
+<p>Glucovora belongs to a family of tiny single cells that drift in water and feed only on sugar. It is the
+                    shyest and hungriest member of its family.</p>
+</div>
+<div class="right">
+<h3 class="green">Habitat:</h3>
+<p>Small drops of sugary water.</p>
+
+<h3 class="green">Appearance:</h3>
+<p>A small, pale oval cell with a striped edge, a soft teal inside and a few pink and magenta spots.</p>
+
+<h3 class="green">Key Characteristics:</h3>
+<ul>
+<li>Never stops wobbling.</li>
+<li>Runs from the mouse.</li>
+<li>Eats only sugar.</li>
+<li>Grows with every bite.</li>
+</ul>
+</div>
+</div>
+<div class="one-column">
+<p>
+<span class="yellow">What we know so far about Sweet Tooth cell?</span>
+                The Sweet Tooth cell was first spotted as a tiny, jittery speck that never sat still. Under a stronger lens,
+                scientists saw that it was hunting: whenever it touched a grain of sugar, the sugar vanished and the
+                cell grew 20% bigger. Its hunger feeds itself, because the bigger it grows, the farther it can reach,
+                so every grain it eats makes the next one easier to catch. Luckily, it is extremely timid. It senses
+                anything coming close and speeds away, and the closer the danger gets, the faster it flees. Once the
+                danger is gone, it slowly calms down and goes back to wobbling. Researchers who managed to touch one
+                found that it freezes and turns dark, and it has never been seen moving again.
+<br>
+<span class="yellow">Guidelines for human interaction with this creature</span> Move your mouse close to
+                the Sweet Tooth cell and it will run away, faster the closer you get. Leave it alone to watch it eat the white
+                sugar dots and grow. If you are quick enough to click right on it, you catch it and it freezes forever.
+                Reload the page to meet a new one.
+</p>
+</div>
+</div>
+
+<!-- Footer -->
+<div id="footer" class="black">
+</div>
+
+<!-- Home: Link back to the ATLAS page-->
+<div id="home">
+<a href="https://cclab.work/atlas">Back to the ATLAS</a>
+</div>
+
+<!-- Include your sketch.js file here -->
+<script src="sketch.js" type="text/javascript"> </script>
+</body>
+
+</html>
